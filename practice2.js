@@ -150,6 +150,10 @@ const cars = [
   **********/
   
   function countCarsMadeInYear(cars, year) {
-    
-  }
+    // return car.year.push(year)
+    return cars.filter( (x) => x.year == year).length;
+}
+  
   console.log(countCarsMadeInYear(cars, 2020));
+
+
