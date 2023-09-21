@@ -42,9 +42,9 @@ const products = [
     **********/
   
   function getProductName(product) {
-    return product.name
+    // Your code here
   }
-  console.log(getProductName(products[0]));
+  // console.log(getProductName(products[0]));
   
   /**********
     Question 2:
@@ -57,9 +57,9 @@ const products = [
     **********/
   
   function isProductCategoryMatching(product, category) {
- if (product.category == category){ return true }else {return false} 
+    // Your code here
   }
-  console.log(isProductCategoryMatching(products[1], "Clothing"));
+  // console.log(isProductCategoryMatching(products[1], "Clothing"));
   
   /**********
     Question 3:
@@ -111,17 +111,17 @@ const products = [
     **********/
   
   function addProduct(products, product) {
-   products.push(product); return products
+    // Your code here
   }
   
-  const newProduct = {
-    "id": 206,
-    "name": "Headphones",
-    "category": "Electronics",
-    "price": 149.99
-  };
+  // const newProduct = {
+  //   "id": 206,
+  //   "name": "Headphones",
+  //   "category": "Electronics",
+  //   "price": 149.99
+  // };
   
-  console.log(addProduct(products, newProduct));
+  // console.log(addProduct(products, newProduct));
   
   /**********
     Question 4:
@@ -131,25 +131,11 @@ const products = [
     ===
     ANSWER: 2
     **********/
-
-
-  function countElectronicsProducts(product) {
-    products.forEach( (product)=>{product.category == `Electronics`} );
-    return product.length
-    
-    };
   
-    console.log(countElectronicsProducts(products));
-
-
-
-    // products.product.filter(product.category == `Electronics`)
-    // return products.length 
- 
-//   console.log(countElectronicsProducts(products));
-
-
-
+  function countElectronicsProducts(products) {
+    // Your code here
+  }
+  // console.log(countElectronicsProducts(products));
   
   /**********
     Question 5: 🌶️
@@ -161,21 +147,11 @@ const products = [
     ANSWER: ["Laptop", "Headphones"]
     **********/
   
-//   function listProductNamesByCategory(product, category) {
-//    if (product.category == category ) {
-//     return product.name
-//    }
-//   }
-//   console.log(listProductNamesByCategory(products, "Electronics"));
+  function listProductNamesByCategory(products, category) {
+    // Your code here
+  }
+  // console.log(listProductNamesByCategory(products, "Electronics"));
   
-function listProductNamesByCategory(product, category) {
-    let newarray1 =[]
-    products.map
-     return product.name
-    }
-   }
-   console.log(listProductNamesByCategory(products, "Electronics"));
-   
   /**********
   Question 6: 🌶️🌶️
   You have a function getCheapestProduct(products) that:
@@ -191,9 +167,9 @@ function listProductNamesByCategory(product, category) {
   }
   **********/
   
-//   function getCheapestProduct(products) {
-//     // Your code here
-//   }
+  function getCheapestProduct(products) {
+    // Your code here
+  }
   // console.log(getCheapestProduct(products));
   
   /**********
@@ -234,13 +210,10 @@ function listProductNamesByCategory(product, category) {
     **********/
   
   function removeProductById(products, productId) {
-    products.filter((product)=> product.id != productId)
-    return products
-
-    } 
-
-
-  console.log(removeProductById(products, 202));
+    // Your code here
+  }
+  
+  // console.log(removeProductById(products, 202));
   
   /**********
     Question 8: 🌶️🌶️🌶️
