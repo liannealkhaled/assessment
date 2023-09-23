@@ -134,8 +134,8 @@ const cities = [
   ANSWER: 1
   **********/
   
-  // function countCitiesInCountry(cities, country) {
-  //   return cities.filter(cities.country == country).length
+  function countCitiesInCountry(cities, country) {
+    return cities.filter(cities.country == country).length
    
-  // }
-  // console.log(countCitiesInCountry(cities, "France"));
+  }
+  console.log(countCitiesInCountry(cities, "France"));
