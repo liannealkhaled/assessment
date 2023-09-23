@@ -42,7 +42,7 @@ const products = [
     **********/
   
   function getProductName(product) {
-    return product.name
+return product.name
   }
   console.log(getProductName(products[0]));
   
@@ -57,7 +57,7 @@ const products = [
     **********/
   
   function isProductCategoryMatching(product, category) {
- if (product.category == category){ return true }else {return false} 
+return product.category == category
   }
   console.log(isProductCategoryMatching(products[1], "Clothing"));
   
@@ -111,7 +111,8 @@ const products = [
     **********/
   
   function addProduct(products, product) {
-   products.push(product); return products
+    products.push(product)
+    return products
   }
   
   const newProduct = {
@@ -131,25 +132,17 @@ const products = [
     ===
     ANSWER: 2
     **********/
-
-
-  function countElectronicsProducts(product) {
-    products.forEach( (product)=>{product.category == `Electronics`} );
-    return product.length
-    
-    };
   
-    console.log(countElectronicsProducts(products));
+    function countElectronicsProducts(products) {
+        return products.filter((x)=>{x.category == "Electronics" }).length
+    }
 
-
-
-    // products.product.filter(product.category == `Electronics`)
-    // return products.length 
- 
-//   console.log(countElectronicsProducts(products));
-
-
-
+//   function countElectronicsProducts(products) {
+//     let category1 = [] 
+//  category1 =  products.filter((x)=>{if (x.category == "Electronics"){ category1.push(x)}} )
+//  return category1.length
+//   }
+  console.log(countElectronicsProducts(products));
   
   /**********
     Question 5: 🌶️
@@ -161,21 +154,18 @@ const products = [
     ANSWER: ["Laptop", "Headphones"]
     **********/
   
-//   function listProductNamesByCategory(product, category) {
-//    if (product.category == category ) {
-//     return product.name
-//    }
-//   }
-//   console.log(listProductNamesByCategory(products, "Electronics"));
+  function listProductNamesByCategory(products, category) {
+          let productlist = [];
+          products.forEach( (x) => {
+            if(x.category == category){
+                productlist.push(x.name)
+            }
+          })
+          return productlist;
+        }
   
-function listProductNamesByCategory(product, category) {
-    let newarray1 =[]
-    products.map
-     return product.name
-    }
-   
-   console.log(listProductNamesByCategory(products, "Electronics"));
-   
+  console.log(listProductNamesByCategory(products, "Electronics"));
+  
   /**********
   Question 6: 🌶️🌶️
   You have a function getCheapestProduct(products) that:
@@ -191,10 +181,27 @@ function listProductNamesByCategory(product, category) {
   }
   **********/
   
-//   function getCheapestProduct(products) {
-//     // Your code here
-//   }
-  // console.log(getCheapestProduct(products));
+  function getCheapestProduct(products) {
+  let cheapest = products[0];
+  products.forEach(
+  (x)=>{ if (x.price < cheapest.price ) cheapest =x}
+  ) 
+  return cheapest;
+  }
+
+  function gethighetsProduct(products) {
+    let highest = products[0];
+    products.forEach(
+    (x)=>{ if (x.price > highest.price ) highest =x}
+    ) 
+    return highest;
+    }
+  
+  
+
+  console.log(getCheapestProduct(products));
+
+  console.log(gethighetsProduct(products));
   
   /**********
     Question 7:
@@ -234,12 +241,9 @@ function listProductNamesByCategory(product, category) {
     **********/
   
   function removeProductById(products, productId) {
-    products.filter((product)=> product.id != productId)
-    return products
-
-    } 
-
-
+ return products.filter((x)=>x.id !== productId)
+  }
+  
   console.log(removeProductById(products, 202));
   
   /**********
@@ -267,8 +271,11 @@ function listProductNamesByCategory(product, category) {
     **********/
   
   function getProductsByPriceRange(products, minPrice, maxPrice) {
-    // Your code here
+    let filtered = [] 
+    filtered= products.filter((x)=>{x.price >= minPrice && x.price <= maxPrice} )
+    return filtered
   }
+
+  console.log(getProductsByPriceRange(products, 19.99, 59.99));
   
-  // console.log(getProductsByPriceRange(products, 19.99, 59.99));
-  
+
